@@ -1,0 +1,8 @@
+{
+  "name": "Atlas AI Education – Atlas AI Institute",
+  "description": "An education and capacity-development initiative of Atlas AI Institute dedicated to expanding access to practical AI knowledge, professional capabilities, and responsible technology innovation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

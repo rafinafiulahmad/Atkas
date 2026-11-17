@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-bn: 'Hind Siliguri', system-ui, -apple-system, sans-serif;
+    --font-en: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+    /* Core Color Tokens */
+    --color-primary: #0056D2;
+    --color-primary-hover: #003E9C;
+    --color-navy: #0B1F4B;
+    --color-footer: #07142F;
+    --hero-gradient: linear-gradient(135deg, #00419E 0%, #0B1F4B 100%);
+    --color-tint: #EAF1FD;
+    --color-soft-bg: #F5F8FF;
+    --color-heading: #1F1F1F;
+    --color-body: #5B6270;
+    --color-border: #E3E8F0;
+
+    /* Tier Accent Tokens */
+    --color-free: #1E8E3E;
+    --color-literacy: #0056D2;
+    --color-applied: #4B3FD6;
+    --color-professional: #0B1F4B;
+    --color-specialised-border: #9AA5B8;
+    --color-specialised-bg: #FAFBFD;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-bn);
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #ffffff;
+    color: var(--color-heading);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-heading);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
+  .font-bn,
+  [lang='bn'] {
+    font-family: var(--font-bn);
+    letter-spacing: 0;
+  }
+
+  .font-en,
+  [lang='en'] {
+    font-family: var(--font-en);
+    letter-spacing: -0.01em;
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.hero-gradient {
+  background: var(--hero-gradient);
+}
+
+.prose-measure {
+  max-width: 80ch;
+}
+
+/* Smooth focus accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
